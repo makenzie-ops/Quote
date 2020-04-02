@@ -13,6 +13,9 @@ export class QuoteComponent implements OnInit {
   new  Quotes (2,  'You cant go back and change the beginning but you can start where you are and change the ending.', 'C.S Lewis' ),
   new Quotes  ( 3 , 'You dont have to be great to start but you have to start to be great' ,'Zig Ziglar'),
   ]
+  toggleDetails(index){
+    this.quote[index].showDetails = this.quote[index].showDetails;
+  }
 
   constructor() { }
 
