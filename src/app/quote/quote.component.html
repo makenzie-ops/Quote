@@ -1,0 +1,12 @@
+<div class="container-fluid text-center">
+    <h2>Quote for us</h2> 
+ 
+ </div>
+ <ul>
+     <li *ngFor = 'let quotes of quote'>
+      <p > {{quotes.saying}}</p>
+      <p> By :{{quotes.author}}</p>
+        <app-quote-detail [quote]='quote'></app-quote-detail>
+     </li>
+ </ul>
+ 
