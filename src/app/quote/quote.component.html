@@ -3,9 +3,9 @@
  
  </div>
  <ul>
-     <li *ngFor = 'let quotes of quote'>
+     <li *ngFor = 'let quotes of quote; let i = index'>
       <p > {{quotes.saying}}</p>
-      <p> By :{{quotes.author}}</p>
+      <button (click)='toggleDetails(i)'>show quote Details</button>
         <app-quote-detail [quote]='quote'></app-quote-detail>
      </li>
  </ul>
