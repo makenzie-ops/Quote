@@ -8,7 +8,7 @@ import {Quote} from '../quotes'
 })
 export class VoteComponent implements OnInit {
 
-  @Output() toDelete = new EventEmitter<boolean>();
+  
     upsVote = 0;
     downsVote = 0;
 

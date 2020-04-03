@@ -1,2 +1,8 @@
 <p> {{quote.author}}</p>
-<button (click)= 'quoteDelete(true)'>Delete me</button>
+<p>This was written  {{quote.writtenDate | dayCount}} days ago</p>
+<p>Written on : {{quote.writtenDate |date}}</p>
+
+<a href="#" class="btn btn-outline-danger btn-lg" (click)= 'quoteDelete(true)'>
+    <span class="glyphicon glyphicon-trash"></span> 
+  </a>
+<!-- <button (click)= 'quoteDelete(true)'>Delete me</button> -->

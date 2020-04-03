@@ -1,12 +1,12 @@
-<div class="container-fluid text-center">
-    <h2 class="jumbotron">Quote for us</h2> 
+<div class="container-fluid text-center " style="background-color: black" id="title">
+    <h2 class="jumbotron "   >Quote for us</h2> 
   </div>
  
-  <div class="row container-fluid">
-    <div class="col-md-7">
+  <div  id="details">
+    <div class="col-md-6" style="background-color: wheat;">
      <div  *ngFor = 'let quote of quotes; let i = index'>
        <div>
-        <p > {{quote.saying}}</p>
+        <p  id="{{i}}" appHighlight > {{quote.saying}}</p>
         <button (click)='toggleDetails(i)'>show quote Details</button>
 
        </div>
@@ -17,7 +17,7 @@
       <app-vote></app-vote>
      </div> 
     </div>
-    <div class="col-md-5">
+    <div class="col-md-6" style="background-color: honeydew;" >
       <app-quote-form (addQuote)="addNewQuote ($event)"></app-quote-form>
     </div>
   </div>

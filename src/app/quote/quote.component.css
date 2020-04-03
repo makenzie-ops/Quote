@@ -1,0 +1,13 @@
+#details {
+    font-family: 'Satisfy';font-size: 22px;
+
+}
+.jumbotron {
+    padding: 70px;
+    height: 100px;
+  background-color: purple; /* For browsers that do not support gradients */
+  background-image: linear-gradient(-90deg,rgb(228, 99, 138),rgb(190, 43, 190)); /* Standard syntax (must be last) */
+}
+#title {
+    font-family: 'Courgette';font-size: 22px;
+}
