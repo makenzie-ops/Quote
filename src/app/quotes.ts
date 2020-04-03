@@ -1,4 +1,4 @@
-export class Quotes {
+export class Quote {
     showDetails:boolean;
     constructor(
         public id  : number,

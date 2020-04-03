@@ -1,12 +1,15 @@
 <div class="container-fluid text-center">
-    <h2>Quote for us</h2> 
+    <h2 class="jumbotron">Quote for us</h2> 
  
  </div>
  <ul>
-     <li *ngFor = 'let quotes of quote; let i = index'>
-      <p > {{quotes.saying}}</p>
+     <li *ngFor = 'let quote of quotes; let i = index'>
+      <p > {{quote.saying}}</p>
       <button (click)='toggleDetails(i)'>show quote Details</button>
-      <app-quote-detail *ngIf='quotes.showDetails' [quote]='quote'></app-quote-detail>
+      <div *ngIf='quote.showDetails'>
+        <app-quote-detail  [quote]='quote' (toDelete)= 'deleteQuote($event,i)'></app-quote-detail>
+
+      </div>
      </li>
  </ul>
  

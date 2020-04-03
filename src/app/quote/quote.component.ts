@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Quotes} from '../quotes'
+import {Quote} from '../quotes'
 import { from } from 'rxjs';
 
 @Component({
@@ -8,13 +8,21 @@ import { from } from 'rxjs';
   styleUrls: ['./quote.component.css']
 })
 export class QuoteComponent implements OnInit {
-  quote:Quotes []=[
-  new Quotes (1, 'The purpose of our lives is to be happy' , 'Dalai Lama') ,
-  new  Quotes (2,  'You cant go back and change the beginning but you can start where you are and change the ending.', 'C.S Lewis' ),
-  new Quotes  ( 3 , 'You dont have to be great to start but you have to start to be great' ,'Zig Ziglar'),
+  quotes :Quote []=[
+  new Quote (1, 'The purpose of our lives is to be happy' , 'Dalai Lama') ,
+  new  Quote (2,  'You cant go back and change the beginning but you can start where you are and change the ending.', 'C.S Lewis' ),
+  new Quote  ( 3 , 'You dont have to be great to start but you have to start to be great' ,'Zig Ziglar'),
   ]
+  showDetails = false;
+
   toggleDetails(index){
-    this.quote[index].showDetails = this.quote[index].showDetails;
+    console.log(this.quotes)
+    this.quotes[index].showDetails = !this.quotes[index].showDetails;
+  }
+  deleteQuote(toDelete,index){
+    if(toDelete){
+      this.quotes.splice(index,1)
+    }
   }
 
   constructor() { }
