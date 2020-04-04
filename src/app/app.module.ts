@@ -8,8 +8,8 @@ import { QuoteComponent } from './quote/quote.component';
 import { QuoteDetailComponent } from './quote-detail/quote-detail.component';
 import { HighlightDirective } from './highlight.directive';
 import { QuoteFormComponent } from './quote-form/quote-form.component';
-import { VoteComponent } from './vote/vote.component';
 import { DayCountPipe } from './date-count.pipe';
+import { VoteComponent } from './vote/vote.component';
 
 
 @NgModule({
@@ -19,8 +19,10 @@ import { DayCountPipe } from './date-count.pipe';
     QuoteDetailComponent,
     HighlightDirective,
     QuoteFormComponent,
-    VoteComponent,
+   
     DayCountPipe,
+   
+    VoteComponent,
     
   ],
   imports: [

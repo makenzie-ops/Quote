@@ -11,3 +11,16 @@
 #title {
     font-family: 'Courgette';font-size: 22px;
 }
+#ups {
+    float: right;
+    
+}
+#downs {
+    margin-left: 470px;
+}
+.show{
+    margin: 5px;
+}
+#say {
+    margin-top: 5px;
+}

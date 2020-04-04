@@ -5,13 +5,22 @@
   <div  id="details">
     <div class="col-md-6" style="background-color: wheat;">
      <div  *ngFor = 'let quote of quotes; let i = index'>
-       <div>
-        <p  id="{{i}}" appHighlight > {{quote.saying}}</p>
-        <button (click)='toggleDetails(i)'>show quote Details</button>
+       
+        <p  id="{{i}}" appHighlight id="say" > {{quote.saying}}</p>
+        <div class="container fluid">
+          <a href="#" class="btn btn-outline-success btn-lg" id="ups" (click)="upVotes(i)">{{quote.ups}}
+              <span class="glyphicon glyphicon-thumbs-up"></span> 
+            </a>
+            <a href="#" class="btn btn-outline-danger btn-lg"  id="downs" (click)="downVotes(i)">{{quote.downs}}
+              <span class="glyphicon glyphicon-thumbs-down"></span> 
+            </a>
+        <button (click)='toggleDetails(i) ' class="show">show quote Details</button>
 
        </div>
+
        <div *ngIf='quote.showDetails'>
         <app-quote-detail  [quote]='quote' (toDelete)= 'deleteQuote($event,i)'></app-quote-detail>
+        
 
       </div>
       <app-vote></app-vote>
