@@ -33,12 +33,37 @@ export class QuoteComponent implements OnInit {
     quote.id= quoteLength +1;
     this.quotes.push(quote)
   }
+
+  best:number = 0
+
+  getHighestVote() {
+    for (let i = 0; i < this.quotes.length; i++) {
+    if(this.quotes[i].ups>this.best){
+    this.best= this.quotes[i].ups;
+    }
+    }
+    for (let i = 0; i < this.quotes.length; i++) {
+    if(this.quotes[i].ups===this.best){
+    console.log(this.quotes[i])
+    this.quotes[i].highestQuote = true
+    }
+    else{
+    this.quotes[i].highestQuote = false
+    }
+    }
+    }
+    
+
   upVotes(index){
     this.quotes[index].ups = this.quotes[index].ups + 1
+    this.getHighestVote()
   }
   downVotes(index){
     this.quotes[index].downs = this.quotes[index].downs + 1
+    this.getHighestVote()
   }
+
+ 
   
 
   constructor() { }

@@ -6,7 +6,11 @@
     <div class="col-md-6" style="background-color: wheat;">
      <div  *ngFor = 'let quote of quotes; let i = index'>
        
-        <p  id="{{i}}" appHighlight id="say" > {{quote.saying}}</p>
+        <p  *ngIf ='quote.highestQuote; else notHighest'appHighlight  > {{quote.saying}}</p>
+
+       <ng-template #notHighest ><p>{{quote.saying}}</p></ng-template>
+
+
         <div class="container fluid">
           <a href="#" class="btn btn-outline-success btn-lg" id="ups" (click)="upVotes(i)">{{quote.ups}}
               <span class="glyphicon glyphicon-thumbs-up"></span> 

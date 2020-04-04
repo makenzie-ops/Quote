@@ -5,7 +5,7 @@
             <div class="form-group container" id="saying" >
   
             <label for="quote">My quote</label>
-            <textarea ngModel name="saying" class="form-control" id="saying" rows="2"  [(ngModel)]="newQuote.saying"  #saying='ngModel'required ></textarea>
+            <textarea  class="form-control" id="saying" rows="2"  [(ngModel)]="newQuote.saying"  name="saying"  #saying='ngModel'required ></textarea>
             <div [hidden]="saying.valid || saying.pristine" class="alert alert-danger">
               <p>Quote is required</p>
            
@@ -13,14 +13,14 @@
         </div>
         <div class="form-group container " id="author">
             <label for="author">Author</label>  
-            <input type="text" ngModel name="author" class="form-control" name="author" [(ngModel)] = "newQuote.author" id="author" #author='ngModel' required> 
+            <input type="text"  class="form-control"  [(ngModel)] = "newQuote.author" id="author" name="author" #author='ngModel' required> 
             <div [hidden]="author.valid || author.pristine" class="alert alert-danger">
               <p>Author details is required</p>             
             </div>
             </div>
             <div class="form-group container " id="author">
               <label for="name"> Your name </label>  
-              <input type="text" ngModel name="name" class="form-control" name="name" [(ngModel)] = "newQuote.name" id="name" #name='ngModel' required> 
+              <input type="text"   class="form-control"  [(ngModel)] = "newQuote.name" id="name" name="name" #name='ngModel' required> 
               <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
                 <p>Author details is required</p>             
               </div>
