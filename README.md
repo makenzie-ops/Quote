@@ -19,6 +19,20 @@ This is a Quote application created that allows users to add Quotes view them an
 *If you have git Use this command git clone * to clone the project.
 *Run ng serve in the terminal
 ## Link to live page:
+click to the link below
+ https://makenzie-ops.github.io/quote/
+
+## Technologies Used
+*Angular CLI
+*Typescript
+*Bootstrap
+*css
+
+## Support and Contact Details
+For any issues or suggestions and feedback contact me @laurenmakenzie0@gmail.com
+## License
+This project is licensed under the MIT Open Source license Copyright (c) 2020. Lauren Makenzie
+
 
 
 
