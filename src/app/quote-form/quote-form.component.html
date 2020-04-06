@@ -7,7 +7,7 @@
             <label for="quote">My quote</label>
             <textarea  class="form-control" id="saying" rows="2"  [(ngModel)]="newQuote.saying"  name="saying"  #saying='ngModel'required ></textarea>
             <div [hidden]="saying.valid || saying.pristine" class="alert alert-danger">
-              <p>Quote is required</p>
+              <p>Quote  required</p>
            
             </div>       
         </div>
@@ -22,7 +22,7 @@
               <label for="name"> Your name </label>  
               <input type="text"   class="form-control"  [(ngModel)] = "newQuote.name" id="name" name="name" #name='ngModel' required> 
               <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
-                <p>Author details is required</p>             
+                <p> Your name is required</p>             
               </div>
               </div>
 
