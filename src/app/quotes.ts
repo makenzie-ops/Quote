@@ -1,6 +1,4 @@
 export class Quote {
-    public ups:number
-    public downs:number
     showDetails:boolean;
     highestQuote :boolean;
     constructor(
@@ -8,10 +6,11 @@ export class Quote {
         public saying : string,
         public author: string,
         public name : string,
+        public ups:number,
+        public downs:number,
         public writtenDate : Date){
 
-         this.ups =0;
-         this.downs =0;
+        
         this.showDetails=false;
         this.highestQuote = false;
         }
